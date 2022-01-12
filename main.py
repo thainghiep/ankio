@@ -1,2 +1,3 @@
-print("hello world")
-print("Bye world")
+import anki
+
+print("test")
