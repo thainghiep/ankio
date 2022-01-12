@@ -1,5 +1,4 @@
 import openpyxl
-import os
 
 def get_value_excel(filename, cellname):
     wb = openpyxl.load_workbook(filename)
@@ -15,11 +14,13 @@ def update_value_excel(filename, cellname, value):
     wb.close()
     wb.save(filename)
 
+update_value_excel("file.xlsx","A1","nghiep")
+
 col_name_acc="A"
 col_name_pass="B"
 filename='file.xlsx'
 FirstLine = 1
-LastLine = 50
+LastLine = 25
 for i_row in range(FirstLine,LastLine):
 	cell_name_acc="%s%s"%(col_name_acc,i_row)
 	cell_name_pass="%s%s"%(col_name_pass,i_row)
@@ -28,4 +29,6 @@ for i_row in range(FirstLine,LastLine):
 	password=get_value_excel(filename, cell_name_pass)
 
 	print(int(i_row/LastLine*100),"%")
+
+
 print("done")

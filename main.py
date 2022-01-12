@@ -1,14 +1,56 @@
 import anki
+import openpyxl
 
-Word = "PLANT"
-Example = "plants need light and water"
+FileName = input("Address File: ")
+Column_Word = input("Column word: ")
+Column_Example = input("Column example: ")
+Column_Hint = input("Column hint: ")
+Column_ClozeExample = input("Column cloze example: ")
+StartLine = input("Start line: ")
+EndLine = input("End line: ")
+'''
+FileName = "Data.xlsx"
+Column_Word = "A"
+Column_Example = "B"
+Column_Hint = "C"
+Column_ClozeExample = "D"
+StartLine = "1"
+EndLine = "5"
+'''
+def get_value_excel(filename, cellname):
+    wb = openpyxl.load_workbook(filename)
+    Sheet1 = wb['Sheet1']
+    wb.close()
+    return Sheet1[cellname].value
 
-Word = Word.lower()
-Example = Example.lower()
-Hint = anki.Hint(Word)
-ClozeExample = anki.ClozeExample(Word,Example)
+def update_value_excel(filename, cellname, value):
+    wb = openpyxl.load_workbook(filename)
+    Sheet1 = wb['Sheet1']
+    Sheet1[cellname].value = value
+    wb.close()
+    wb.save(filename)
 
-print(Word)
-print(Example)
-print(Hint)
-print(ClozeExample)
+for i_row in range(int(StartLine),int(EndLine)+1):
+    Cell_Word = Column_Word + str(i_row)
+    Cell_Example = Column_Example + str(i_row)
+    Cell_Hint = Column_Hint + str(i_row)
+    Cell_ClozeExample = Column_ClozeExample + str(i_row)
+
+    Word = get_value_excel(FileName,Cell_Word)
+    Example = get_value_excel(FileName,Cell_Example)
+
+    Word = Word.lower()
+    Example = Example.lower()
+
+    Hint = anki.Hint(Word)
+    ClozeExample = anki.ClozeExample(Word,Example)
+
+    update_value_excel(FileName,Cell_Word,Word)
+    update_value_excel(FileName,Cell_Example,Example)
+    update_value_excel(FileName,Cell_Hint,Hint)
+    update_value_excel(FileName,Cell_ClozeExample,ClozeExample)
+
+    print(i_row/int(EndLine)*100,"%")
+
+print("done")
+
