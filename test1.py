@@ -15,24 +15,6 @@ def update_value_excel(filename, cellname, value):
     wb.close()
     wb.save(filename)
 
-''' demo1
-filename='file.xlsx'
-cellname='G6'
-bien_x=get_value_excel(filename, cellname)
-print('bien_x',bien_x)
-'''
-
-''' demo2
-filename='file.xlsx'
-cellname='G6'
-new_value='dep trai'
-update_value_excel(filename, cellname, new_value)
-'''
-
-#demo3
-#F7 => F17
-#G7 =>G17
-
 col_name_acc="A"
 col_name_pass="B"
 filename='file.xlsx'
@@ -41,9 +23,9 @@ LastLine = 50
 for i_row in range(FirstLine,LastLine):
 	cell_name_acc="%s%s"%(col_name_acc,i_row)
 	cell_name_pass="%s%s"%(col_name_pass,i_row)
-	print(cell_name_acc)
+	#print(cell_name_acc)
 	account=get_value_excel(filename, cell_name_acc)
 	password=get_value_excel(filename, cell_name_pass)
 
-	#print(int(i_row/LastLine*100),"%")
+	print(int(i_row/LastLine*100),"%")
 print("done")
