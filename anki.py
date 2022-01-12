@@ -1,9 +1,5 @@
-def LowerCase():
-  pass
-
 def ClozeExample(Word,Example):
   Cloze = "{{c1::" + Word + "}}"
-  Word = " " + Word + " "
   return Example.replace(Word,Cloze)
 
 def Hint(Word):
