@@ -8,15 +8,7 @@ Column_Hint = input("Column hint: ")
 Column_ClozeExample = input("Column cloze example: ")
 StartLine = input("Start line: ")
 EndLine = input("End line: ")
-'''
-FileName = "Data.xlsx"
-Column_Word = "A"
-Column_Example = "B"
-Column_Hint = "C"
-Column_ClozeExample = "D"
-StartLine = "1"
-EndLine = "5"
-'''
+
 def get_value_excel(filename, cellname):
     wb = openpyxl.load_workbook(filename)
     Sheet1 = wb['Sheet1']
