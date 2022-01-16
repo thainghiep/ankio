@@ -1,7 +1,7 @@
 import anki
 import openpyxl
 
-FileName = input("Address File: ")
+FileName = "C:\Users\nghiep\Desktop\ank3i.xlsx"
 Column_Word = input("Column word: ")
 Column_Example = input("Column example: ")
 Column_Hint = input("Column hint: ")
