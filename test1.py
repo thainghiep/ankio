@@ -1,25 +1,15 @@
-print("C:\\Users\\nghiep\\Desktop\\ank3i.xlsx")
+import openpyxl
 
+cardlist = [x for x in range(144)]
 
+wb = openpyxl.load_workbook("anki.xlsx")
+Sheet1 = wb['Sheet1']
+wb.close()
 
+for i in range(144):
+    cell = "B" + str(int(i) + 1)
+    cardlist[i] = Sheet1[cell].value
 
+print(cardlist)
 
-
-
-
-
-
-
-
-
-
-
-'''
-FileName = input("Address File: ")
-Column_Word = input("Column word: ")
-Column_Example = input("Column example: ")
-Column_Hint = input("Column hint: ")
-Column_ClozeExample = input("Column cloze example: ")
-StartLine = input("Start line: ")
-EndLine = input("End line: ")
-'''
+#print(data)

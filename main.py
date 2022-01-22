@@ -1,14 +1,6 @@
 import anki
 import openpyxl
 
-FileName = "C:\Users\nghiep\Desktop\ank3i.xlsx"
-Column_Word = input("Column word: ")
-Column_Example = input("Column example: ")
-Column_Hint = input("Column hint: ")
-Column_ClozeExample = input("Column cloze example: ")
-StartLine = input("Start line: ")
-EndLine = input("End line: ")
-
 def get_value_excel(filename, cellname):
     wb = openpyxl.load_workbook(filename)
     Sheet1 = wb['Sheet1']
@@ -46,3 +38,12 @@ for i_row in range(int(StartLine),int(EndLine)+1):
 
 print("done")
 
+def setting():
+    pass
+    FileName = "C:\\Users\\nghiep\\Desktop\\ank3i.xlsx"
+    Column_Word = input("Column word: ")
+    Column_Example = input("Column example: ")
+    Column_Hint = input("Column hint: ")
+    Column_ClozeExample = input("Column cloze example: ")
+    StartLine = input("Start line: ")
+    EndLine = input("End line: ")
