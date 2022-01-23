@@ -10,3 +10,9 @@ def Hint(Word):
     suggest = suggest + "_ "
   suggest = suggest.strip()
   return First + suggest + Last
+
+def HintV2(Word):
+  suggest = ""
+  for i in range(len(Word)-2):
+    suggest = suggest + "_ "
+  suggest = suggest.strip()
