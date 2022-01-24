@@ -7,7 +7,7 @@ def Cloze(Word,Example):
   return Example.replace(Word,Cloze)
 
 
-'''  Hint(Word):
+'''     Hint(Word):
 moon            ==>        m_ _ _
 to the moon     ==>        t_ t_ _ m_ _ _
 '''
@@ -23,3 +23,13 @@ def Hint(Word):
         SubWord[i] = HintNoSpace(SubWord[i]) 
     delimiter = " "
     return  delimiter.join(SubWord)
+
+
+def Filter(Data):
+    for i in range(len(Data)):
+        Data[i] = str(Data[i]).strip()
+    salt = "###"
+    filter = salt.join(Data)
+    filter = filter.lower()
+    after = filter.split(salt)
+    return after
