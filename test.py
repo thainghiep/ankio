@@ -1,8 +1,10 @@
-import ankio 
+column = "A"
 
-word = "moon"
-example = "to the moon"
+startrow = 1
+endrow = 10
 
-print(ankio.Hint(word))
-print(ankio.Cloze(word, example))
+#CellList(Column,StartRow,EndRow)
+
+def CellList(Column,StartRow,EndRow):
+    pass
 
