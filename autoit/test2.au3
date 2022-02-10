@@ -1,12 +1,10 @@
-#include <StringConstants.au3>
+$word = "to the moon"
 
+$arrWord = StringSplit($word, " ")
 
-$word = "   to the  moon  "
+for $i in $arrWord
+	MsgBox(0,0, $i)
+Next
 
-Func _Filter($string)
-	$string = StringLower($string)
-	$string = StringStripWS($string, $STR_STRIPLEADING + $STR_STRIPTRAILING + $STR_STRIPSPACES)
-	Return $string
-EndFunc
-
-MsgBox(0,0,"#" & _Filter($word) & "#")
+for $i to $arrWord[0]
+	$arrWord
