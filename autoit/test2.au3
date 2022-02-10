@@ -1,6 +1,12 @@
-#include <MsgBoxConstants.au3>
+#include <StringConstants.au3>
 
-; Replace a blank space (' ') with a - (minus) character.
-Local $sString = StringReplace("This is a sentence with whitespace.", " ", "-")
-Local $iReplacements = @extended
-MsgBox($MB_SYSTEMMODAL, "", $iReplacements &  @CRLF & @CRLF & $sString)
+
+$word = "   to the  moon  "
+
+Func _Filter($string)
+	$string = StringLower($string)
+	$string = StringStripWS($string, $STR_STRIPLEADING + $STR_STRIPTRAILING + $STR_STRIPSPACES)
+	Return $string
+EndFunc
+
+MsgBox(0,0,"#" & _Filter($word) & "#")
