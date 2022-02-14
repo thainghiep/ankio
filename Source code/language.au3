@@ -5,7 +5,7 @@ Global $lg_CreateCloze = "tạo câu ví dụ ẩn từ vựng"
 
 Global $lg_Start = "bắt đầu"
 Global $lg_Feedback = "góp ý"
-Global $lg_Feedback_text = "trong quá trình làm ra sản phẩm có thể mình làm chưa chính xác vậy nên" & @CRLF & "mình rất cảm ơn bạn khi có thể cho mình cơ hội để hoàn thiện sản phẩm hơn" & @CRLF & "mọi góp ý của bạn có thể gửi về Gmail của mình: thainghiep20@gmail.com" & @CRLF & @CRLF & "xin chân thành cảm ơn ^.^" & @CRLF & @CRLF & "-----------------" & @CRLF & "ankio v2.0.0" & @CRLF & "14/2/2022" & @CRLF & "nghiệp"
+Global $lg_Feedback_text = "trong quá trình làm ra sản phẩm có thể mình làm chưa chính xác vậy nên mình rất cảm ơn bạn khi có thể cho mình cơ hội để hoàn thiện sản phẩm hơn, mọi góp ý của bạn có thể gửi về Gmail của mình: thainghiep20@gmail.com" & @CRLF & @CRLF & "xin chân thành cảm ơn ^.^" & @CRLF & @CRLF & "-----------------" & @CRLF & "ankio v2.0.0" & @CRLF & "14/2/2022" & @CRLF & "nghiệp"
 Global $lg_Word = "từ vựng"
 Global $lg_Example = "ví dụ"
 Global $lg_Hint = "gợi ý"
